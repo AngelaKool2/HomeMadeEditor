@@ -82,14 +82,13 @@ void main() {
 			
 		}
 		else if (letter == 27) {
-			//do nothing
-			//fstream file("TextFile.txt", ios::out);
+			
+			fstream file("TextFile.txt", ios::out);
 			Node* x = head;
-
-			//while (x->next != NULL) {
-			//	file << x->c;
-			//	x = x->next;
-			//}
+			while (x->next != NULL) {
+				file << x->c;
+				x = x->next;
+			}
 		}
 		else if (letter == 8 && curr != NULL) { //Press back
 			if (curr != NULL && curr->prev != NULL) {
